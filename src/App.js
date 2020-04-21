@@ -24,7 +24,17 @@ class App extends Component {
     this.setState({ ninjas });
   };
 
+  componentDidMount() {
+    console.log('component did mount')
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('component did update')
+    console.log(prevProps, prevState)
+  }
+
   render() {
+    console.log('render')
     const { ninjas } = this.state;
 
     return (
